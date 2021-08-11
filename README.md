@@ -103,6 +103,7 @@
 :--:|:--:|:--:|:--:
 -f | --file | 欲处理的PDF名称或路径 |
 -o | --output | 翻译内容输出文件名或文件路径 | 如不指定，则默认与PDF同名
+
 <font color="#990000">*注：调用百度翻译API，但需要自己申请APP ID和秘钥，并配置到`pdf_translate_config.json`文件中，并在使用时保持网络连接*<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;详细使用说明见`PDF_Translate使用说明`文件</font>
  
 

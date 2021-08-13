@@ -1,6 +1,18 @@
 #统计每个key中有数据的条目占总条目的比例
 import argparse
 import csv
+import sys
+maxInt = sys.maxsize
+
+while True:
+    # decrease the maxInt value by factor 10 
+    # as long as the OverflowError occurs.
+
+    try:
+        csv.field_size_limit(maxInt)
+        break
+    except OverflowError:
+        maxInt = int(maxInt/10)
 
 def write_to_csv(dict_item, head, path):
     with open(path, 'a', encoding='utf-8', newline='') as f:

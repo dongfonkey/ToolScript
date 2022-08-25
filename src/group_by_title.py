@@ -8,6 +8,14 @@ def write_to_csv(dict_item, head, path):
     f.close()
 
 
+def valid_filename(filename):
+    illegal_str = ["\"", "*", "<", ":>", "?", "\\", "|", "/", ":"]
+    for item in illegal_str:
+        filename = filename.replace(item, "")
+    return filename
+
+
+
 def main():
     parser = argparse.ArgumentParser(description="将CSV文件按某一字段排序")
     parser.add_argument("-f", "--file", help="原始文件名", dest="source_file", type=str)

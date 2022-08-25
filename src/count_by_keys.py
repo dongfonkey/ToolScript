@@ -5,9 +5,6 @@ import sys
 maxInt = sys.maxsize
 
 while True:
-    # decrease the maxInt value by factor 10 
-    # as long as the OverflowError occurs.
-
     try:
         csv.field_size_limit(maxInt)
         break
